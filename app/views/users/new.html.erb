@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+    <h1>Sign Up</h1>
+
+    <%= render "layouts/flash" %>
+
+    <%= bootstrap_form_for :user do |f| %>
+      <%= f.text_field :email, placeholder: "Enter your email", icon: "user" %>
+      <%= f.password_field :password, placeholder: "Create a password", icon: "lock" %>
+      <%= f.text_field :name, placeholder: "What's your name?" %>
+      <%= f.submit "Sign Up", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>

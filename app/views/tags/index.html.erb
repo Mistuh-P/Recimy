@@ -1,0 +1,25 @@
+<div class="row">
+<div class="container col-xs-8 col-xs-offset-4">
+<h1>Categories  <%= link_to "add category", new_tag_path, :class=>"btn btn-success" %></h1>
+
+ <%= render "layouts/flash" %>
+
+
+<% @tags.each do |t| %>
+
+  <li id="category-li">
+  <%=  link_to t.name, t %>
+  <!-- <%= link_to "edit", edit_tag_path(t.id), :class=>"btn btn-success" %> -->
+  <%= link_to "x", t, :method => :delete, :class=>"btn btn-xs btn-danger x-but" %>
+
+
+</li>
+
+<% end %>
+
+
+
+
+
+</div>
+</div>

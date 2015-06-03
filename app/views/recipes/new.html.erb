@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="container col-md-4 col-md-offset-4">
+<h1 id="headerstyle">Add a Recipe</h1>
+  <%= bootstrap_form_for @recipe do |c| %>
+  <%= c.text_field :name, :placeholder =>"Name it!", :class => 'formstyle' %>
+  <%= c.text_field :ingredients, :placeholder =>"What's in it?", :class => 'formstyle' %>
+  <%= c.text_field :directions, :placeholder =>"What's the drill?", :class => 'formstyle formstyle1' %>
+  <%= c.collection_check_boxes :tag_ids, @tags, :id, :name %>
+  <%= c.primary :class => 'btn btn-success' %>
+  <% end %>
+  </div>
+</div>

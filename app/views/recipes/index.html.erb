@@ -1,0 +1,17 @@
+<div class="row">
+<div class="container col-xs-8 col-xs-offset-4">
+<h1>All Recipes  <%= link_to "Add a Recipe", new_recipe_path, :class=>"btn btn-success"%></h1>
+
+<% @recipes.each do |c| %>
+
+  <li><%= link_to c.name, c %></li>
+
+<% end %>
+
+<br>
+<br>
+
+
+
+</div>
+</div>

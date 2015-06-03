@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="container col-md-6 col-md-offset-3">
+
+<h1 class="heady"><%= @recipe.name %></h1>
+
+<img src=<%= @photo %>>
+
+<br>
+<br>
+
+
+<p class="textty"><b>Ingredients:</b><br>
+
+<script type="text/javascript">
+    var mystring = '<%=  @recipe.ingredients %>';
+    mystring = '<ul id=ingredients><li>' + mystring.replace(/,/g,'</li><li>') + '</li></ul>';
+    document.write(mystring);
+</script>
+
+<br>
+<br> <b>Directions:</b> <br>
+
+
+
+<script type="text/javascript">
+    var mystring = '<%=  @recipe.directions %>';
+    mystring = '<ul id=directions><li>' + mystring.replace(/~/gi,'</li><li>') + '</li></ul>';
+    document.write(mystring);
+</script>
+
+
+<br> <br><b>Categories:</b> <br>
+
+ <!-- <%= @recipe.tags.map{|t| t.name}.join(', ') %> -->
+
+  <% @tag.each do |t| %>
+      <li class="recipes"><%= link_to t.name, t %></li>
+    <% end %>
+
+
+
+</p>
+
+<!--
+  <%=  @recipe.tags.each do |t|
+
+  link_to t.name, tag_path(t)
+
+ end %>
+ -->
+
+
+
+
+<br>
+
+<% if @recipe.user_id === @current_user.id %>
+<%= link_to "Edit recipe", edit_recipe_path, :class=>"btn btn-success" %>
+<%= link_to "Remove recipe", @recipe, :method => :delete, :class=>"btn btn-danger" %>
+<% else %>
+<% end %>
+</div>
+</div>
+
+
+
