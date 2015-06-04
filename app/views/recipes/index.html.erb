@@ -1,10 +1,17 @@
 <div class="row">
-<div class="container col-xs-8 col-xs-offset-4">
-<h1>All Recipes  <%= link_to "Add a Recipe", new_recipe_path, :class=>"btn btn-success"%></h1>
+<div class="container col-xs-8 col-xs-offset-4 recipe-div">
+<h1 class="heady">All Recipes  <%= link_to "Add a Recipe", new_recipe_path, :class=>"btn btn-success"%></h1>
 
 <ul id="directions">
 <% @recipes.each do |c| %>
-  <li><%= link_to c.name, c %> </li>
+  <li>
+
+  <h3 id="all-recipe"><%= link_to c.name, c %></h3>
+
+  <br>
+
+    <%= link_to "add to cookbook", recipe_favorite_path(c.id), :class=>"btn btn-info" %>
+  </li>
 <% end %>
 <ul>
 

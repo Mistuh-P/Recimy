@@ -1,7 +1,27 @@
+
+
+
 <h1><%= @current_user.name%>'s Cook Book  <%= link_to "Add a Recipe", new_recipe_path, :class=>"btn btn-success"%></h1>
 
+
+<div class="container col-xs-6">
+
+<h2>Personal Recipes:</h2>
 <% @recipes.each do |c| %>
 
   <li><%= link_to c.name, c %></li>
 
 <% end %>
+</div>
+
+
+<div class="container col-xs-6">
+<h2>Borrowed Recipes:</h2>
+<% @favorites.each do |c| %>
+
+  <li><%= link_to c.name, c %></li>
+
+<% end %>
+</div>
+
+

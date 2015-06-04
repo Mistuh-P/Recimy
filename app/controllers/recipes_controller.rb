@@ -5,6 +5,7 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all.order('created_at DESC')
     @current_user = current_user
+
   end
 
   def new
@@ -27,6 +28,20 @@ class RecipesController < ApplicationController
       @recipe.tags << Tag.find(t) unless t.blank?
     end
     redirect_to @recipe
+  end
+
+  def favorite
+    is_authenticated?
+
+    current_user.favorites << Recipe.find(params[:id])
+
+    redirect_to cookbook_path
+
+  end
+
+  def remove_favorite
+
+
   end
 
   def show
@@ -77,7 +92,7 @@ p @current_user
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name,:ingredients,:directions)
+    params.require(:recipe).permit(:name,:ingredients,:directions,:id)
   end
 
 
