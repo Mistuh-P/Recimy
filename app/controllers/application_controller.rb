@@ -8,8 +8,12 @@ class ApplicationController < ActionController::Base
 
 
   def is_authenticated?
-    redirect_to login_path unless current_user
+    unless current_user
+      flash[:danger] = "You are not logged in"
+      redirect_to login_path
+    end
   end
+
 
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'logout' => 'sessions#destroy'
 
+  post 'favorite' => 'favorites#create'
 
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'

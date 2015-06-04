@@ -3,17 +3,19 @@ class RecipesController < ApplicationController
   before_action :fix_directions
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.order('created_at DESC')
     @current_user = current_user
   end
 
   def new
+    is_authenticated?
     @current_user = current_user
     @recipe = Recipe.new
     @tags = Tag.all
   end
 
   def create
+    is_authenticated?
     @current_user = current_user
     @recipe = Recipe.create(recipe_params)
     current_user.recipes << @recipe

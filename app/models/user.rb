@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   has_many :recipes
 
+  has_many :favorites
+
   validates :email,
     presence: true,
     uniqueness: {case_sensitive: false}
