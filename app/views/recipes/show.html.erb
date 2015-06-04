@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="container col-md-6 col-md-offset-3">
+  <div class="container col-md-6 col-md-offset-3 recipe-div">
 
 <h1 class="heady"><%= @recipe.name %></h1>
 
@@ -9,7 +9,7 @@
 <br>
 
 
-<p class="textty"><b>Ingredients:</b><br>
+<p class="textty"><h2 id="heady2">Ingredients:</h2 id="heady2"><br>
 
 <script type="text/javascript">
     var mystring = '<%=  @recipe.ingredients %>';
@@ -18,7 +18,7 @@
 </script>
 
 <br>
-<br> <b>Directions:</b> <br>
+<br> <h2 id="heady2">Directions:</h2> <br>
 
 
 
@@ -29,14 +29,14 @@
 </script>
 
 
-<br> <br><b>Categories:</b> <br>
+<br> <br><h2 id="heady2">Categories:</h2> <br>
 
  <!-- <%= @recipe.tags.map{|t| t.name}.join(', ') %> -->
-
+<ul class="category-list">
   <% @tag.each do |t| %>
-      <li class="recipes"><%= link_to t.name, t %></li>
+      <li class="category-item"><%= link_to t.name, t %></li>
     <% end %>
-
+</ul>
 
 
 </p>

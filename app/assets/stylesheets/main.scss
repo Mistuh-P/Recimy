@@ -1,4 +1,21 @@
-body{
-  background-image: image_url('nice-kitchen.jpg');
+body {
+  background: image_url('nice-kitchen.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+
+// body{
+//   background-image: image_url('nice-kitchen.jpg');
+//   background-repeat: no-repeat;
+//   background-position: center center fixed cover;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+
+// }
+
 

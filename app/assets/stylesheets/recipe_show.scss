@@ -1,12 +1,38 @@
 ul#ingredients {
  /*list-style-type: circle;*/
  list-style-position: outside;
- list-style-image: image_url('rsz_carrot.png');
+ list-style-image: image_url('carrot.png');
+ color: white;
 }
 
 
 ul#directions {
  /*list-style-type: circle;*/
  list-style-position: outside;
- list-style-image: image_url('rsz_fry-pan.png');
+ list-style-image: image_url('fry-pan.png');
+ color: white
+}
+
+.recipe-div{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.heady{
+  color: white;
+}
+
+#heady2{
+  color: white;
+}
+
+.category-list{
+  color: white;
+}
+
+.category-item a{
+  color: white;
+}
+
+.category-item a:hover{
+  color: white;
 }
