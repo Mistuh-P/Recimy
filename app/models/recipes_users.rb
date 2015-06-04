@@ -1,4 +1,4 @@
 class RecipesUsers < ActiveRecord::Base
-  belongs_to_many :recipe
-  belongs_to_many :user
+  belongs_to :recipe
+  belongs_to :user
 end
