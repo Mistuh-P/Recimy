@@ -44,7 +44,7 @@ def destroy
 
    if @tag.recipes.length == 1
 
-    flash[:danger] = "Can't delete! There is #{ @tag.recipes.length } creature using this tag!"
+    flash[:danger] = "Can't delete! There is #{ @tag.recipes.length } recipe using this tag!"
 
    elsif @tag.recipes.length > 1
 
