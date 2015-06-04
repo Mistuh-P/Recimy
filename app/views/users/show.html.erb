@@ -19,7 +19,10 @@
 <h2>Borrowed Recipes:</h2>
 <% @favorites.each do |c| %>
 
-  <li><%= link_to c.name, c %></li>
+  <li>
+  <%= link_to c.name, c %>
+  <%= link_to "x", remove_favorite_path(c.id), :method=>'delete', :class=>"btn btn-info" %>
+  </li>
 
 <% end %>
 </div>

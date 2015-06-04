@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
 
   get 'recipe/:id/favorite' => 'recipes#favorite', as: 'recipe_favorite'
+  delete 'favorite/:id' => 'recipes#remove_favorite', as: 'remove_favorite'
 
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'

@@ -40,7 +40,12 @@ class RecipesController < ApplicationController
   end
 
   def remove_favorite
+    is_authenticated?
 
+    current_user.favorites.destroy(params[:id])
+    p("this is getting hit")
+
+    redirect_to cookbook_path
 
   end
 
