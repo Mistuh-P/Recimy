@@ -2,7 +2,15 @@
   color: #fff;
 }
 
+.navbar-default .navbar-nav>li>a.cat-nav{
+  color: white;
+}
+
 .navbar-default .navbar-nav>li>a.about-nav:hover {
+  color: yellow;
+}
+
+.navbar-default .navbar-nav>li>a.cat-nav:hover {
   color: yellow;
 }
 
@@ -14,6 +22,11 @@
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus  {
   color: white;
 }
+
+.navbar-default .navbar-nav>.open>a.drop-style{
+  color: white;
+}
+
 body {
   background: image_url('nice-kitchen.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
