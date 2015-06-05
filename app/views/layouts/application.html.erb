@@ -20,24 +20,32 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
+
     <a class="navbar-brand" href="/">Recimy</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class=""><a href="/tags">Categories</a></li>
+
+      <li class=""><a href="">About</a></li>
+
+
+
+       <% if @current_user %>
+
+      <li class=""><a href="/tags">Category Search</a></li>
+
 
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recipes <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li><a href="/recipes">All</a></li>
+          <li><a href="/cookbook">Personal</a></li>
           <li><a href="/recipes/new">Create</a></li>
         </ul>
       </li>
 
-       <% if @current_user %>
-       <li><a href="/cookbook">My CookBook</a></li>
       <% else %>
 
       <% end %>

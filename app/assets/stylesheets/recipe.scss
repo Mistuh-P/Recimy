@@ -17,13 +17,11 @@ ul#directions {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.heady{
-  color: white;
+.recipe-head{
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#heady2{
-  color: white;
-}
 
 .category-list{
   color: white;
@@ -33,8 +31,12 @@ ul#directions {
   color: white;
 }
 
-.category-item a:hover{
+.category-item{
   color: white;
+}
+
+.category-item a:hover{
+  color: yellow;
 }
 
 #all-recipe a{
@@ -44,5 +46,21 @@ ul#directions {
 
 #all-recipe a:hover{
   color:yellow;
+
+}
+
+.add-rec{
+  float: right;
+}
+
+label{
+  color: white
+}
+
+a.x-but1{
+  color: red;
+  background-color: rgba(0, 0, 0, 0.0);
+  border-color: rgba(0, 0, 0, 0.0);
+  // float: left;
 
 }

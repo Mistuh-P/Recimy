@@ -1,19 +1,19 @@
 <div class="row">
-<div class="container col-xs-8 col-xs-offset-4">
-<h1>Categories  <%= link_to "add category", new_tag_path, :class=>"btn btn-success" %></h1>
+<div class="container col-xs-10 col-xs-offset-1 recipe-div div-mate">
+<h1 class="heady cat-head">Categories  <%= link_to "", new_tag_path, :class=>"btn btn-success add-cat glyphicon glyphicon-plus" %></h1>
 
  <%= render "layouts/flash" %>
 
 
 <% @tags.each do |t| %>
 
-  <li id="category-li">
+  <h2 class="category-item" >
   <%=  link_to t.name, t %>
   <!-- <%= link_to "edit", edit_tag_path(t.id), :class=>"btn btn-success" %> -->
-  <%= link_to "x", t, :method => :delete, :class=>"btn btn-xs btn-danger x-but" %>
+  <%= link_to "x", t, :method => :delete, :class=>"btn btn-xs btn-danger x-but"%>
 
 
-</li>
+</h2>
 
 <% end %>
 
@@ -23,3 +23,4 @@
 
 </div>
 </div>
+
