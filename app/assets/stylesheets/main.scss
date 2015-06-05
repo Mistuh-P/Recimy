@@ -1,3 +1,19 @@
+.navbar-default .navbar-nav>li>a.about-nav {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a.about-nav:hover {
+  color: yellow;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: white;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus  {
+  color: white;
+}
 body {
   background: image_url('nice-kitchen.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -19,6 +35,36 @@ body {
   color: white;
 }
 
+.nav-style{
+  background: image_url('black-back.jpg');
+  border-color: black;
+}
+
+
+a.navbar-brand.nav-title{
+  color: white;
+}
+
+a.navbar-brand.nav-title:hover{
+  color: yellow;
+}
+
+a.about-nav{
+  color: white;
+}
+
+li.a.about-nav{
+  color: white
+}
+
+
+.about-nav{
+  color: white;
+}
+
+ul.nav .navbar-nav{
+  color: white;
+}
 // body{
 //   background-image: image_url('nice-kitchen.jpg');
 //   background-repeat: no-repeat;

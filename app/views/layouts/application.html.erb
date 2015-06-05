@@ -11,7 +11,7 @@
 
   <%= csrf_meta_tags %>
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default nav-style" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -21,28 +21,28 @@
       <span class="icon-bar"></span>
     </button>
 
-    <a class="navbar-brand" href="/">Recimy</a>
+    <a class="navbar-brand nav-title" href="/">Recimy</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
 
-      <li class=""><a href="">About</a></li>
+      <li><a class="about-nav" href="">About</a></li>
 
 
 
        <% if @current_user %>
 
-      <li class=""><a href="/tags">Category Search</a></li>
+      <li class="about-nav"><a href="/tags">Category Search</a></li>
 
 
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recipes <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="/recipes">All</a></li>
+          <li class="drop-style"><a href="/recipes">All</a></li class="drop-style">
           <li><a href="/cookbook">Personal</a></li>
-          <li><a href="/recipes/new">Create</a></li>
+          <li class="drop-style"><a href="/recipes/new">Create</a></li>
         </ul>
       </li>
 
