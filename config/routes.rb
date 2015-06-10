@@ -5,15 +5,20 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  get 'about' => 'home#show'
+
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
 
+
   delete 'logout' => 'sessions#destroy'
   get 'logout' => 'sessions#destroy'
 
+
   get 'recipe/:id/favorite' => 'recipes#favorite', as: 'recipe_favorite'
   delete 'favorite/:id' => 'recipes#remove_favorite', as: 'remove_favorite'
+
 
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'

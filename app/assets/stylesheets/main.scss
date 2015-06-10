@@ -2,6 +2,22 @@
   color: #fff;
 }
 
+.navbar-default .navbar-nav>li>a.dropdown-toggle.drop-style{
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a.dropdown-toggle.drop-style:hover{
+  color: yellow;
+}
+
+.navbar-default .navbar-nav>li>a.log-but{
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a.log-but:hover{
+  color: yellow;
+}
+
 .navbar-default .navbar-nav>li>a.cat-nav{
   color: white;
 }
@@ -25,6 +41,10 @@
 
 .navbar-default .navbar-nav>.open>a.drop-style{
   color: white;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  background-color: black;
 }
 
 body {
@@ -88,5 +108,11 @@ ul.nav .navbar-nav{
 //   background-size: cover;
 
 // }
+
+#teamPic {
+  max-width: 200px;
+  border-radius: 50%;
+  // box-shadow: 0 0 20px #111111;
+}
 
 
